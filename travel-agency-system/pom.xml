@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com</groupId>
+  <artifactId>travel-agency-system</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <properties>
+    <!-- 設定專案編碼為 UTF-8，避免中文亂碼 -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- 設定 Java 版本為 11 -->
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <!-- 統一管理 SLF4J 版本 -->
+    <slf4j.version>2.0.12</slf4j.version>
+  </properties>
+
+  <dependencies>
+    <!-- 1. MySQL 資料庫驅動程式 -->
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.28</version>
+    </dependency>
+
+    <!-- 2. HikariCP 資料庫連線池 -->
+    <dependency>
+        <groupId>com.zaxxer</groupId>
+        <artifactId>HikariCP</artifactId>
+        <version>5.0.1</version>
+    </dependency>
+
+    <!-- 3. jBCrypt 密碼加密工具 -->
+    <dependency>
+        <groupId>org.mindrot</groupId>
+        <artifactId>jbcrypt</artifactId>
+        <version>0.4</version>
+    </dependency>
+
+    <!-- 4. SLF4J API (日誌門面) -->
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${slf4j.version}</version>
+    </dependency>
+
+    <!-- 5. SLF4J Simple Implementation (日誌的具體實現) -->
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-simple</artifactId>
+	    <version>${slf4j.version}</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.jdatepicker</groupId>
+	    <artifactId>jdatepicker</artifactId>
+	    <version>1.3.4</version>
+	</dependency>
+	
+	
+  </dependencies>
+
+  <build>
+    <plugins>
+        <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version>
+        </plugin>
+    </plugins>
+  </build>
+</project>
